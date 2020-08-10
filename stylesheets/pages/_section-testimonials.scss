@@ -1,0 +1,90 @@
+.section-testimonials {
+  padding: 65px 0 140px;
+
+  .row {
+    margin-top: 45px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: 1510px;
+    }
+  }
+}
+
+.testimonial-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 35px 25px 55px;
+
+  height: 100%;
+  min-height: 315px;
+
+  background: $white;
+  border: 1px solid #e1e1e1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    left: 38%;
+    bottom: -23px;
+    z-index: 0;
+    width: 125px;
+    height: 120px;
+    background: url('../assets/images/icon-backflower.png') no-repeat;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    z-index: -1;
+
+    width: 91%;
+    height: 100%;
+    background: #ffe8f3;
+  }
+
+  .testimonial-text {
+    position: relative;
+    z-index: 1;
+
+    margin-bottom: 20px;
+
+    font-family: $font-montserrat;
+    font-size: 18px;
+    line-height: 1.45;
+    color: $text-color;
+    text-align: center;
+  }
+
+  .testimonial-image {
+    position: absolute;
+    bottom: -63px;
+    left: 0;
+    width: 100%;
+
+    margin: auto;
+
+    img {
+      margin: 0 auto;
+    }
+
+    .testimonial-author {
+      position: relative;
+      z-index: 1;
+      
+      margin-bottom: 15px;
+
+      font-family: $font-montserrat;
+      font-size: 16px;
+      font-weight: 650;
+      line-height: 26px;
+      color: $text-color;
+      text-align: center;
+    }
+  }
+}

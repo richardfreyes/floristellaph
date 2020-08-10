@@ -1,0 +1,35 @@
+﻿@charset 'UTF-8';
+
+@import
+  'utils/variables',
+  'utils/functions',
+  'utils/mixins';
+
+@import
+  'vendors/bootstrap',
+  'vendors/font-awesome';
+
+@import
+  'base/base',
+  'base/fonts',
+  'base/typography';
+
+@import
+  'layout/header',
+  'layout/footer';
+
+@import
+  'components/alert',
+  'components/buttons',
+  'components/form',
+  'components/layout';
+
+@import
+  'pages/section-about',
+  'pages/section-banner',
+  'pages/section-bestseller',
+  'pages/section-collections',
+  'pages/section-feed',
+  'pages/section-sale',
+  'pages/section-searchbar',
+  'pages/section-testimonials';

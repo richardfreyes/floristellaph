@@ -1,0 +1,42 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 50px;
+  height: 70px;
+  
+  font-family: $font-averta;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 0;
+  
+  @include transition(all ease-in-out .3s);
+
+  &-primary {
+    color: $white;
+
+    font-size: 15.5px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    background-color: $brand-color;
+    border-color: $brand-color;
+
+    @include on-event {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+    }
+
+    &:not(:disabled):not(.disabled):active, 
+    &:not(:disabled):not(.disabled).active {
+      background-color: $secondary-color;
+      border-color: $secondary-color;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    &-secondary {
+      font-size: 12px;
+    }
+  }
+}

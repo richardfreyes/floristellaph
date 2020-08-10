@@ -1,0 +1,21 @@
+.section-feed {
+  padding: 85px 0 125px;
+
+  .section-title {
+    margin-bottom: 30px;
+  }
+
+  .section-description {
+    font-size: 22px;
+  }
+
+  .row {
+    margin-top: 55px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    .container {
+      max-width: 1480px;
+    }
+  }
+}

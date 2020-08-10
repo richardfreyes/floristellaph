@@ -1,0 +1,52 @@
+.alert {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0;
+
+  width: 100%;
+  color: $white;
+  
+  &-primary {
+    height: 51px;
+
+    background-color: $brand-color;
+
+    p {
+      font-size: 17px;
+      letter-spacing: .4px;
+    }
+  }
+
+  &-secondary {
+    height: 60px;
+
+    background-color: $dark-gray;
+
+    .list-unstyled {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        display: flex;
+        align-items: center;
+        font-family: $font-montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        
+        a {
+          color: $white;
+        }
+
+        .icon {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}

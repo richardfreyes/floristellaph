@@ -1,0 +1,81 @@
+.section-searchbar {
+  padding-bottom: 42px;
+  background: #f9f9f9;
+
+  .container {
+    position: relative;
+  }
+
+  .search-wrapper {
+    position: relative;
+    width: 100%;
+    top: -107px;
+    z-index: 10;
+
+    padding: 30px 50px;
+    height: 210px;
+
+    background: $white;
+    border-top: 8px solid $brand-color;
+    @include boxshadow(0 0 31px rgba($black,0.13));
+
+    h3 {
+      font-family: $font-montserrat;
+      font-size: 30px;
+      font-weight: 650;
+      color: $text-color;
+      letter-spacing: .85px;
+    }
+
+    &--form {
+      margin-top: 31px;
+
+      .input-group {
+        flex-wrap: nowrap;
+        height: 50px;
+      }
+
+      .form-control {
+        height: 100%;
+
+        font-family: $font-montserrat;
+        font-size: 18px;
+        color: #8c8c8c;
+        letter-spacing: .5px;
+
+        border-radius: 0;
+      }
+
+      .btn {
+        padding: 0 30px;
+      }
+    }
+  }
+
+  .features-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    margin-top: -36px;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 220px;
+      height: 135px;
+      font-family: $font-montserrat;
+      font-size: 16px;
+      color: $black;
+      text-align: center;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1355px;
+    }
+  }
+}
