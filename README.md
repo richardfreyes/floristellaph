@@ -1,1 +1,1 @@
-# floristellaph
+# Floristella - Frontend
