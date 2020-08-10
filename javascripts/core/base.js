@@ -1,3 +1,3 @@
-window.Outgive = window.Outgive || {};
-window.Outgive.Core = window.Outgive.Core || {};
-window.Outgive.Modules = window.Outgive.Modules || {};
+window.Floristella = window.Floristella || {};
+window.Floristella.Core = window.Floristella.Core || {};
+window.Floristella.Modules = window.Floristella.Modules || {};
