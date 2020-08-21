@@ -97,14 +97,110 @@ footer {
     }
   }
 
-  @media screen and (min-width: 1200px) {
-    .container {
-      max-width: 1480px;
+  @media screen and (max-width: 1440px) {
+    padding: 35px 0;
+  }
+
+  @include respond-to(md-up) {
+    .col-lg-2 {
+      flex: 0 0 calc(58.33333% / 3);
+      max-width: 58.33333%;
     }
   }
 
-  .col-md-2 {
-    flex: 0 0 calc(58.33333% / 3);
-    max-width: 58.33333%;
+  @include respond-to(md-down) {
+    padding: 20px 0 20px;
+
+    h4 {
+      font-size: 14px;
+    }
+
+    .footer-links {
+      margin-bottom: 10px;
+
+      a {
+        font-size: 13px;
+      }
+    }
+
+    .input-group {
+      width: 325px;
+      height: 38px;
+    }
+    
+    .copyright-text {
+      width: 100%;
+      margin-bottom: 10px;
+  
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .payment-method {
+      width: 100%;
+      float: unset;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .list-inline-item,
+      .list-inline-item:not(:last-child) {
+        margin: 0 5px 10px;
+      }
+    }
+
+    .col-lg-2 {
+      flex: 0 0 calc(100% / 3);
+      max-width: calc(100% / 3);
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .social-media-links {
+      margin-bottom: 25px;
+    }
+  }
+
+  @include respond-to(xs) {    
+    .col-lg-2 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .input-group {
+      width: 98%;
+      height: 35px;
+
+      .form-control,
+      .btn-outline {
+        font-size: 13px;
+      }
+    }
+
+    h4 {
+      font-size: 13px;
+    }
+
+    .footer-links {
+      margin-bottom: 10px;
+
+      a {
+        font-size: 12px;
+      }
+    }
+
+    
+    .payment-method {
+      .list-inline-item,
+      .list-inline-item:not(:last-child) {
+        width: 40px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+
   }
 }

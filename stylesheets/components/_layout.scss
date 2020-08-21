@@ -36,3 +36,29 @@
     background: #ffe8f3;
   }
 }
+
+.accent-background {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 0;
+    z-index: -2;
+
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+
+    background: url('../../assets/images/pink-background.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@include respond-to(xs) {
+  .accent-background:after {
+    display: none;
+  }
+}

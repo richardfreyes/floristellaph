@@ -34,9 +34,52 @@
     }
   }
 
+  &-outline {
+    color: $white;
+
+    font-size: 15.5px;
+    letter-spacing: 2px;
+    line-height: 20px;
+    color: $brand-color;
+
+    border-color: $brand-color;
+
+    @include on-event {
+      color: $white;
+      background-color: $brand-color;
+      border-color: $brand-color;
+    }
+
+    &:not(:disabled):not(.disabled):active, 
+    &:not(:disabled):not(.disabled).active {
+      background-color: $brand-color;
+      border-color: $brand-color;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    &-primary,
+    &-outline {
+      padding: 0 30px;
+      height: 50px;
+
+      font-size: 11px;
+    }
+  }
+
   @include respond-to(sm-down) {
     &-secondary {
       font-size: 12px;
+    }
+  }
+
+  @include respond-to(xs) {
+    &-primary,
+    &-outline {      
+      padding: 0 21px;
+      height: 45px;
+
+      font-size: 11px;
     }
   }
 }

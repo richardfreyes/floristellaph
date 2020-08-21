@@ -1,0 +1,100 @@
+.product-holder {
+  position: relative;
+  margin-bottom: 30px;
+  text-align: center;
+
+  .image-holder {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    height: 350px;
+  }
+
+  p {
+    font-family: $font-montserrat;
+    color: $text-color;
+  }
+
+  .product-title {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .product-price {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .badge-sale {
+    position: absolute;
+    top: 0;
+    right: 15px;
+  }
+
+  @media (max-width: 1440px) {
+    .image-holder {
+      height: 260px;
+
+      .img-fluid {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  @include respond-to(lg-down) {
+    .badge-sale {
+      right: 0;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .product-title {
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+
+    .product-price {
+      font-size: 15px;
+    }
+
+    .image-holder {
+      margin-bottom: 20px;
+      height: 175px;
+    }
+  }
+}
+
+.badge-sale,
+.badge-step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 60px;
+  height: 60px;
+
+  font-family: $font-montserrat;
+  font-size: 16px;
+  font-weight: 650;
+  color: $white;
+
+  background-color: $brand-color;
+  border-radius: 30px;
+
+  @media (max-width: 1440px) {
+    width: 48px;
+    height: 48px;
+
+    font-size: 12px;
+  }
+
+  @include respond-to(sm-down) {
+    width: 35px;
+    height: 35px;
+
+    font-size: 10px;
+  }
+}

@@ -15,16 +15,23 @@
   'base/typography';
 
 @import
+  'layout/banner',
   'layout/header',
   'layout/footer';
 
 @import
+  'components/accordion',
   'components/alert',
   'components/buttons',
   'components/form',
-  'components/layout';
+  'components/layout',
+  'components/popup-cart',
+  'components/product';
 
 @import
+  'pages/page-message-ideas',
+  'pages/page-template',
+
   'pages/section-about',
   'pages/section-banner',
   'pages/section-bestseller',

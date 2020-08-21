@@ -1,0 +1,57 @@
+
+.accordion {
+  .card {
+    border: none;
+    border-top: 1px solid rgba($black,0.125);
+
+    &:first-of-type {
+      border-top: 0;
+    }
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    padding: 30px 1.25rem;
+    margin-bottom: 0;
+
+    background: $white;
+    border: none;
+
+    span {
+      float: right;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      color: $brand-color;
+    }
+  }
+
+  .card-body {
+    padding: 0 55px 40px;
+  }
+
+  @include respond-to(lg-down) {
+    .card-header {
+      padding: 20px 1.25rem;
+    }
+
+    .card-body {
+      padding: 0 36px 20px;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .card-header {
+      padding: 15px 0;
+    }
+
+    .card-body {
+      padding: 15px 0px;
+    }
+  }
+}

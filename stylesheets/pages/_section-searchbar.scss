@@ -6,6 +6,14 @@
     position: relative;
   }
 
+  h3 {
+    font-family: $font-montserrat;
+    font-size: 30px;
+    font-weight: 650;
+    color: $text-color;
+    letter-spacing: .85px;
+  }
+
   .search-wrapper {
     position: relative;
     width: 100%;
@@ -18,14 +26,6 @@
     background: $white;
     border-top: 8px solid $brand-color;
     @include boxshadow(0 0 31px rgba($black,0.13));
-
-    h3 {
-      font-family: $font-montserrat;
-      font-size: 30px;
-      font-weight: 650;
-      color: $text-color;
-      letter-spacing: .85px;
-    }
 
     &--form {
       margin-top: 31px;
@@ -73,9 +73,105 @@
     }
   }
 
+  @media (max-width: 1440px) {
+    h3 {
+      font-size: 24px;
+    }
+
+    .search-wrapper {
+      padding: 23px 30px;
+      margin: 0 auto;
+      max-width: 900px;
+
+
+      &--form {
+        .input-group {
+          height: 40px;
+        }
+
+        .form-control {
+          font-size: 15px;
+        }
+
+        .btn {
+          padding: 0 13px;
+          font-size: 12px;
+        }
+      }
+    }
+
+    .features-wrapper {
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .select-group:after {
+      top: 13px;
+      right: 10px;
+      font-size: 15px;
+    }
+  }
+
   @media screen and (min-width: 1200px) {
     .container {
         max-width: 1355px;
+    }
+  }
+
+  @include respond-to(md-down) {
+    h3 {
+      font-size: 21px;
+      letter-spacing: 0;
+      line-height: 1.5;
+    }
+    
+    .search-wrapper {
+      top: -40px;
+      width: 100%;
+
+      &--form {
+        margin-top: 15px;
+        
+        .input-group {
+          height: 35px;
+        }
+
+        .form-control {
+          font-size: 14px;
+        }
+
+        .btn {
+          padding: 0 10px;
+          font-size: 11px;
+        }
+      }
+    }
+
+    .features-wrapper {
+      flex-wrap: wrap;
+      margin-top: 10px;
+
+      li {
+        transform: scale(.8);
+      }
+    }
+
+    .select-group:after {
+      top: 10px;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    .search-wrapper {
+      padding: 20px 15px;
+      height: auto;
+      
+      &--form {
+        .input-group:not(.form-group) {
+          margin-bottom: 15px;
+        }
+      }
     }
   }
 }

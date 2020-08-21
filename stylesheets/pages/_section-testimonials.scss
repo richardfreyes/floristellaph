@@ -1,5 +1,19 @@
 .section-testimonials {
+  position: relative;
   padding: 65px 0 140px;
+  
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -40%;
+    right: 0;
+    z-index: -1;
+    width: 190px;
+    height: 350px;
+    background-image: url('../../assets/images/pink-flower2-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
   .row {
     margin-top: 45px;
@@ -10,9 +24,48 @@
       max-width: 1510px;
     }
   }
+  
+  @media (max-width: 1440px) {
+    padding: 50px 0 100px;
+
+    &:after {
+      bottom: -32%;
+      right: 0;
+      z-index: -1;
+      width: 130px;
+      height: 230px;
+    }
+
+    .container {
+      max-width: 960px;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    padding: 30px 0;
+
+    &:after {
+      display: none;
+    }
+    
+    .row {
+      justify-content: center;
+      
+      > div {
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+  @include respond-to(xs) {
+    .row > div {
+      margin-bottom: 60px;
+    }
+  }
 }
 
 .testimonial-holder {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -85,6 +138,39 @@
       line-height: 26px;
       color: $text-color;
       text-align: center;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    &:before {
+      bottom: -45px;
+      left: 29%;
+    }
+
+    .testimonial-text {
+      font-size: 14px;
+    }
+    
+    .testimonial-image {
+      bottom: -35px;
+
+      .testimonial-author {
+        font-size: 12px;
+      }
+
+      img {
+        width: 70px;
+      }
+    }
+  }
+
+  @include respond-to(sm-down) {
+    margin: 0 auto;
+    max-width: 320px;
+    min-height: 180px;
+
+    .testimonial-text {
+      font-size: 12px;
     }
   }
 }

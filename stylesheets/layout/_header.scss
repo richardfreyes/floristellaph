@@ -9,19 +9,26 @@
     align-items: center;
     justify-content: space-around;
 
-    width: 85%;
+    margin: 0 auto;
+
+    width: 100%;
   }
 
   .container-fluid {
     display: block;
+    max-width: 1410px;
   }
 
   .navbar-brand {
     display: block;
     padding: 0;
-    margin: 0 0 18px;
-    width: 100%;
+    margin: 0 auto 18px;
     @include transition(width 0.3s ease);
+
+    img {
+      margin: 0 auto;
+      @include transition(width 0.3s ease);
+    }
   }
 
   .nav-item {
@@ -58,13 +65,25 @@
     &:last-child() {
       margin-right: 0;
     }
+
+    &.d-flex > .nav-link {
+      margin-right: 1rem;
+    }
   }
 
   &.sticky-top {
     position: sticky;
     padding: 5px 15px;
-    height: 70px;
-    @include boxshadow(0 8px 20px -8px rgba($black, .5));
+    height: auto;
+    @include boxshadow(0 2px 20px -8px rgba($black, .3));
+
+    .navbar-brand {
+      margin: 0 auto 5px;
+
+      img {
+        width: 140px;
+      }
+    }
 
     .nav-item {
       .nav-link {
@@ -80,13 +99,25 @@
     }
   }
 
-  @include respond-to(lg-down) {
-    .container {
-      max-width: 100%;
+  @media screen and (max-width: 1440px) {
+    .navbar-nav {
+      flex-wrap: wrap;
+      justify-content: center;
+      max-width: 1200px;
     }
 
-    .navbar-nav {
-      margin-left: 7%;
+    .nav-item .nav-link {
+      font-size: 13.5px;
+    }
+  }
+
+  @include respond-to(lg-down) {
+    .container-fluid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      max-width: 100%;
     }
   }
 
@@ -94,18 +125,14 @@
     padding: 15px;
     height: unset;
 
-    .container {
-      max-width: 100%;
-    }
-
-    .navbar-nav {
-      margin-left: auto;
-    }
-
     .navbar-brand {
       padding: 0;
       margin: 0;
-      margin-left: 20px;
+      width: unset;
+
+      img {
+        max-width: 110px;
+      }
     }
 
     &.sticky-top {
@@ -124,8 +151,8 @@
     }
 
     .nav-item {
-      margin: 3px 0;
-
+      margin-right: 0;
+      
       .nav-link {
         padding: 8px 0;
         text-align: center;
@@ -134,18 +161,12 @@
   }
 
   @include respond-to(xs) {
-    .navbar-brand {
-      margin-left: 0;
+    .nav-item.d-flex {
+      flex-direction: column;
 
-      img {
-        max-width: 165px;
+      .nav-link {
+        margin-right: 0;
       }
     }
-  }
-}
-
-@media (min-width: 992px) {
-  .navbar-expand-lg>.container-fluid {
-    flex-wrap: wrap;
   }
 }

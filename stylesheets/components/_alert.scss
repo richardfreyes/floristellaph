@@ -12,7 +12,7 @@
   color: $white;
   
   &-primary {
-    height: 51px;
+    padding: 14px 15px;
 
     background-color: $brand-color;
 
@@ -23,7 +23,7 @@
   }
 
   &-secondary {
-    height: 60px;
+    padding: 16px 0;
 
     background-color: $dark-gray;
 
@@ -45,6 +45,82 @@
 
         .icon {
           margin-right: 8px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1440px) {
+    &-primary {
+      padding: 8px 15px;
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    &-secondary {
+      padding: 8px 0;
+      
+      .list-unstyled li {
+        font-size: 12px;
+
+        a {
+          width: 35px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  @include respond-to(md-down) {
+    &-primary {
+      p {
+        max-width: 580px;
+      }
+    }
+    
+    &-secondary {
+      .list-unstyled li {
+        font-size: 13px;
+
+        &:not(.d-flex) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include respond-to(sm-down) {
+    &-primary {
+      p {
+        font-size: 12px;
+      }
+    }
+
+    &-secondary {
+      .list-unstyled li {
+        font-size: 10px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    &-secondary {
+      .list-unstyled {
+        flex-direction: column;
+
+        li:first-child {
+          margin-bottom: 8px;
+        }
+        
+        .icon {
+          width: 25px;
+          height: 100%;
+          object-fit: contain;
         }
       }
     }

@@ -1,5 +1,18 @@
 .section-sale {
+  position: relative;
   padding: 115px 0;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background: url('../../assets/images/blue-lines-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
   .row {
     position: relative;
@@ -72,7 +85,140 @@
 
   @media screen and (min-width: 1200px) {
     .container {
-        max-width: 1680px;
+      max-width: 1680px;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    padding: 75px 0 150px;
+    
+    &:before {
+      width: 130px;
+    }
+
+    .container {
+      max-width: 960px;
+    }
+
+    .row {
+      height: 530px;
+    }
+
+    .sale-image {
+      width: 320px;
+    }
+
+    .sale-text {
+      font-size: 16px;
+
+      &:nth-of-type(2) {
+        margin-bottom: 45px;
+        font-size: 17px;
+      }
+    }
+
+    h2 {
+      font-size: 68px;
+
+      &:before,
+      &:after {
+        width: 65px;
+        height: 135px;
+        background-size: contain;
+      }
+    }
+  }
+
+  @include respond-to(lg-down) {
+    padding: 50px 0 100px;
+
+    .row {
+      height: 320px;
+    }
+
+    .sale-image {
+      margin-top: 35px;
+      width: 200px;
+    }
+
+    .sale-text {
+      font-size: 12px;
+
+      &:nth-of-type(1) {
+        margin-bottom: -10px;
+      }
+
+      &:nth-of-type(2) {
+        margin-bottom: 35px;
+        font-size: 12px;
+      }
+    }
+
+    h2 {
+      font-size: 52px;
+
+      &:before,
+      &:after {
+        width: 45px;
+        height: 88px;
+      }
+    }
+  }
+
+  @include respond-to(sm-down) {
+    padding: 30px 0;
+
+    &:before {
+      width: 80px;
+    }
+
+    .row {
+      padding: 70px 0 40px;
+      margin: 0 auto;
+      max-width: 90%;
+      height: auto;
+    }
+
+    .sale-image {
+      margin-top: 0;
+      width: 170px;
+    }
+
+    .btn-primary {
+      margin-bottom: 10px;
+    }
+  }
+
+  @include respond-to(xs) {
+    .row {
+      max-width: 95%;
+    }
+
+    .sale-image {
+      width: 140px;
+    }
+
+    .sale-text {
+      font-size: 10px;
+
+      &:nth-of-type(1) {
+        margin-bottom: 10px;
+      }
+
+      &:nth-of-type(2) {
+        font-size: 10px;
+      }
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-size: 30px;
+
+      &:before,
+      &:after {
+        width: 30px;
+        height: 60px
+      }
     }
   }
 }

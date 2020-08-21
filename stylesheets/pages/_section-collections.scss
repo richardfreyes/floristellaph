@@ -1,6 +1,19 @@
 .section-collections {
+  position: relative;
   padding: 100px 0;
   
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background: url('../../assets/images/blue-dots.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
   .swiper-wrapper {
     .swiper-slide {
       width: 500px !important;
@@ -110,6 +123,108 @@
       max-width: 1680px;
       margin-left: auto;
       margin-right: 0;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    &:before {
+      width: 220px;
+    }
+
+    .container {
+      max-width: 1180px;
+    }
+
+    .swiper-wrapper .swiper-slide {
+      width: 420px !important;
+      max-width: 420px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 50px;
+      height: 50px;
+    }
+
+    .collection-holder {
+      .collection-title {
+        font-size: 20px;
+      }
+
+      .collection-description {
+        margin-bottom: 10px;
+        font-size: 13px;
+      }
+
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+
+  @include respond-to(lg-down) {
+    &:before {
+      width: 160px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    &:before {
+      display: none;
+    }
+
+    .col-lg-7 {
+      padding-left: 0;
+    }
+
+    .swiper-container {
+      margin-top: 50px;
+    }
+
+    .swiper-navigation {
+      display: none;
+    }
+
+    .swiper-wrapper .swiper-slide {
+      width: 50% !important;
+      max-width: 50%;
+    }
+
+    .collection-holder {
+      .image-holder {
+        height: 220px;
+      }
+    }
+  }
+
+  @include respond-to(xs) {
+    .swiper-wrapper .swiper-slide {
+      width: 100% !important;
+      max-width: 100%;
+    }
+
+    .collection-holder {
+      .image-holder {
+        height: 290px;
+      }
+
+      .collection-title {
+        font-size: 18px;
+      }
+
+      .collection-description {
+        font-size: 12px;
+      }
+
+      a {
+        font-size: 13px;
+      }
     }
   }
 }

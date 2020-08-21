@@ -91,6 +91,19 @@ p > strong {
   line-height: 1.75;
 }
 
+ol { 
+  counter-reset: item;
+
+  li { 
+    display: block;
+
+    &:before { 
+      content: counters(item, ".") " "; 
+      counter-increment: item;
+    }
+  }
+}
+
 // @include respond-to(lg-down) {
 //   h2 {
 //     font-size: 36px;
@@ -114,8 +127,51 @@ p > strong {
 //   }
 // }
 
-// @include respond-to(xs) {
-//   h2 {
-//     font-size: 28px;
-//   }
-// }
+@media (max-width: 1440px) {
+  .section-title {
+    h2 {
+      font-size: 35px;
+    }
+
+    &:after {
+      zoom: .95;
+    }
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+}
+
+@include respond-to(lg-down) {
+  .section-title {
+    h2 {
+      font-size: 30px;
+    }
+
+    &:after {
+      zoom: .75;
+    }
+  }
+
+  .section-description {
+    font-size: 14px;
+  }
+}
+
+@include respond-to(sm-down) {
+  .section-title {
+    h2 {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &:after {
+      zoom: .65;
+    }
+  }
+
+  .section-description {
+    font-size: 12px;
+  }
+}

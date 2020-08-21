@@ -1,0 +1,213 @@
+.popup-cart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+  z-index: 9999;
+
+  padding: 60px;
+  width: 523px;
+  height: 100%;
+
+  background: $white;
+  transform: translateX(-100%);
+  transition: transform ease-in-out .5s;
+
+  h3 {
+    display: block;
+    margin-top: 14px;
+
+    font-size: 23px;
+  }
+
+  .btn-close {
+    display: block;
+    margin-left: auto;
+    margin-top: -5px;
+
+    font-size: 36px;
+
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    @include on-event {
+      border: none;
+      outline: none;
+    }
+
+    i {
+      pointer-events: none;
+    }
+  }
+
+  .btn-primary,
+  .btn-outline {
+    margin-bottom: 13px;
+    width: 100%;
+  }
+
+  .subtotal {
+    font-size: 21px;
+
+    span {
+      margin-left: 7px;
+      font-size: 28px;
+    }
+  }
+
+  .delivery {
+    margin-bottom: 63px;
+    font-size: 20px;
+    color: #666;
+  }
+
+  .items-wrapper {
+    padding: 35px 0 10px;
+    margin-bottom: 37px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  &.show {
+    transform: translateX(0);
+  }
+
+  @media (max-width: 1440px) {
+    padding: 40px 40px 0;
+    width: 430px;
+    
+    h3 {
+      margin-top: 0;
+    }
+
+    .subtotal {
+      font-size: 17px;
+  
+      span {
+        font-size: 24px;
+      }
+    }
+  
+    .delivery {
+      margin-bottom: 35px;
+      font-size: 16px;
+    }
+  }
+
+  @include respond-to(lg-down) {
+    padding: 25px 25px 0;
+    width: 380px;
+
+    .btn-close {
+      font-size: 20px;
+    }
+
+    .items-wrapper {
+      margin-bottom: 20px;
+      padding: 10px 0;
+    }
+  }
+
+  @include respond-to(sm-down) {
+    h3 {
+      font-size: 18px;
+    }
+
+    .subtotal {
+      font-size: 15px;
+
+      span {
+        font-size: 20px;
+      }
+    }
+
+    .delivery {
+      font-size: 13px;
+    }
+  }
+
+  @include respond-to(xs) {
+    width: 100%;
+  }
+}
+
+.item-holder {
+  position: relative;
+
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+
+  .item-image {
+    margin-right: 30px;
+    width: 85px;
+    height: 85px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .item-details {
+    .name {
+      font-size: 20px;
+      font-weight: 550;
+    }
+
+    .price {
+      font-size: 18px;
+    }
+  }
+
+  .btn-delete {
+    position: absolute;
+    top: 16px;
+    right: 0;
+  }
+
+  @media (max-width: 1440px) {
+    .item-image {
+      margin-right: 20px;
+      width: 70px;
+      height: 70px;
+    }
+
+    .item-details {
+      .name {
+        font-size: 17px;
+      }
+  
+      .price {
+        font-size: 15px;
+      }
+    }
+  }
+
+  @include respond-to(sm-down) {
+    height: 80px;
+
+    .item-image {
+      margin-right: 10px;
+      width: 50px;
+      height: 50px;
+    }
+
+    .item-details {
+      .name {
+        font-size: 14px;
+      }
+  
+      .price {
+        font-size: 12px;
+      }
+    }
+
+    .btn-delete {
+      font-size: 15px;
+    }
+  }
+}
+

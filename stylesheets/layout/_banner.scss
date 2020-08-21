@@ -1,0 +1,93 @@
+
+// page banner - text
+.page-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 210px;
+
+  .section-title {
+    padding: 0 15px;
+  }
+}
+
+// page hero banner
+.hero-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  height: 27vw;
+  max-height: 517px;
+    
+  background: rgba($brand-color, 0.2);
+  background-size: cover;
+  
+  .hero-title {
+    margin-bottom: 5px;
+
+    font-size: 60px;
+    font-weight: 600;
+    color: $text-color;
+    line-height: 1.5;
+  }
+
+  .hero-description {
+    margin-bottom: 35px;
+
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+
+  @media (max-width: 1440px) {
+    .hero-title {
+      margin-bottom: 0;
+      font-size: 40px;
+    }
+
+    .hero-description {
+      font-size: 18px;
+    }
+  }
+
+  @include respond-to(lg-down) {
+    height: 300px;
+    
+    .hero-title {
+      font-size: 35px;
+    }
+    
+    .hero-description {
+      font-size: 16px;
+    }
+  }
+  
+  @include respond-to(md-down) {
+    height: 250px;
+  }
+
+  @include respond-to(sm-down) {
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba($white, 0.3);
+    }
+
+    .container {
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-size: 25px;
+    }
+
+    .hero-description {
+      font-size: 14px;
+    }
+  }
+}

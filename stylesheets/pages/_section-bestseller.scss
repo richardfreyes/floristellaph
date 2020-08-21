@@ -13,58 +13,62 @@
   
   @media screen and (min-width: 1200px) {
     .container {
-        max-width: 1490px;
+      max-width: 1490px;
+    }
+  }
+
+  @media (max-width: 1440px) {
+    padding: 60px 0;
+
+    .container {
+      max-width: 960px;
+    }
+  }
+
+  @include respond-to(lg-down) {
+    padding: 50px 0;
+  }
+
+  @include respond-to(sm-down) {
+    .btn {
+      margin-top: 10px;
     }
   }
 }
 
-.product-holder {
+.section-featured {
   position: relative;
-  text-align: center;
 
-  .image-holder {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-
-    height: 350px;
-  }
-
-  p {
-    font-family: $font-montserrat;
-    color: $text-color;
-  }
-
-  .product-title {
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-
-  .product-price {
-    font-size: 18px;
-    font-weight: 500;
-  }
-
-  .badge-sale {
+  &:after {
+    content: '';
     position: absolute;
-    top: 0;
-    right: 15px;
+    bottom: -14%;
+    right: 0;
+    z-index: -1;
+    width: 280px;
+    height: 400px;
+    background-image: url('../../assets/images/pink-flower-bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
   }
-}
 
-.badge-sale {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @media (max-width: 1440px) {
+    &:after {
+      width: 210px;
+      height: 290px;
+    }
+  }
 
-  width: 60px;
-  height: 60px;
+  @include respond-to(lg-down) {
+    &:after {
+      width: 170px;
+      height: 240px;
+    }
+  }
 
-  font-family: $font-montserrat;
-  font-size: 16px;
-  font-weight: 650;
-  color: $white;
-
-  background-color: $brand-color;
-  border-radius: 30px;
+  @include respond-to(sm-down) {
+    &:after {
+      display: none;
+    }
+  }
 }

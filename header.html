@@ -1,14 +1,23 @@
 <div class="container-fluid">
-  <a class="navbar-brand" href="#">
-    <img class="mx-auto" src="assets/images/floristella-logo.png" alt="Floristella">
-  </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#customNavbar"
-    aria-controls="customNavbar" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+    aria-controls="customNavbar" aria-expanded="false">
+    <i class="fa fa-bars"></i>
   </button>
+  <a class="navbar-brand" href="#">
+    <img src="assets/images/floristella-logo.png" alt="Floristella">
+  </a>
+
+  <ul class="list-unstyled d-flex d-lg-none">
+    <li class="list-inline-item">
+      <a href="#"><i class="fa fa-phone"></i></a>
+    </li>
+    <li class="list-inline-item">
+      <a href="#"><i class="fa fa-user"></i></a>
+    </li>
+  </ul>
 
   <div class="collapse navbar-collapse" id="customNavbar">
-    <ul class="navbar-nav mx-auto">
+    <ul class="navbar-nav">
       <li class="nav-item">
         <a class="nav-link" href="#">ECQ/GCQ</a>
       </li>
@@ -41,7 +50,7 @@
         </div>
       </li>
       <li class="nav-item d-flex align-items-center">
-        <span class="nav-link mr-3">Deliver to</span>
+        <span class="nav-link">Deliver to</span>
         <div class="input-group">
           <select class="custom-select">
             <option selected>Metro Manila</option>
@@ -52,7 +61,7 @@
         </div>
       </li>
       <li class="nav-item d-flex align-items-center">
-        <span class="nav-link mr-3">Track my order</span>
+        <span class="nav-link">Track my order</span>
         <div class="form-group has-search">
           <input type="text" class="form-control" placeholder="Enter Order Number">
           <span class="fa fa-search form-control-feedback"></span>
