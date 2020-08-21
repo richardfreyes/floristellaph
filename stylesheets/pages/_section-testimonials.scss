@@ -10,7 +10,7 @@
     z-index: -1;
     width: 190px;
     height: 350px;
-    background-image: url('../../assets/images/pink-flower2-bg.png');
+    background-image: url('../assets/images/pink-flower2-bg.png');
     background-repeat: no-repeat;
     background-size: contain;
   }
@@ -50,7 +50,7 @@
     
     .row {
       justify-content: center;
-      
+
       > div {
         margin-bottom: 80px;
       }
